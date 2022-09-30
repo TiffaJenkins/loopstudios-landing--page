@@ -1,0 +1,534 @@
+/*--------------------------Background--------------------------*/
+/*--------------------------------------------------------------*/
+.section1-bg {
+    padding: 7.5rem 0 7.5rem 0; //120px
+
+    @include mobile {
+        padding: 6rem 0 6rem 0; //96px
+    }
+}
+
+.section2-bg {
+    padding: 0 0 6.875rem 0; //110px
+
+    @include mobile {
+        padding: 0 0 6.25rem 0; //100px
+    }
+}
+/*---------------------------------------------------------------*/
+
+//Main content------
+.main-container {
+
+    .row {
+
+        .col60-2 {
+            padding: 0;
+
+            .section1-img {
+                width: 100%;
+                height: 100%;
+
+                @include mobile {
+                    display: $getRid;
+                }
+            }
+
+            .section1-img-mob {
+                display: $getRid;
+
+                @include mobile {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .col40 {
+            @include flexAlignEnd;
+
+            .overlap-div {
+                @include flexColumn;
+                @include flexEnd;
+                @include flexAlignEnd;
+                height: 65%;
+                background-color: hsl(0, 0%, 100%);
+                margin-left: -32%;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    @include flexCenterAll;
+                    margin-left: 0;
+                }
+
+                .main-h2 {
+                    @include flexEnd;
+                    font-family: $secondryFont;
+                    font-size: 2.5rem; //40px
+                    color: $fontH1Color;
+                    letter-spacing: 0px;
+                    font-weight: $thinFont;
+                    width: 80%;
+                    margin-bottom: 0.1em; //1.6px
+                    //border: $bulidBorder;
+
+                    @include largeTablet {
+                        width: 85%;
+                        font-size: 2.188rem; //35px
+                    }
+
+                    @include tablet {
+                        font-size: 1.875rem; //30px
+                    }
+
+                    @include smallDevice {
+                        font-size: 1.5rem; //24px
+                    }
+
+                    @include mobile {
+                        font-size: 2rem; //32px
+                        padding-top: 1.875rem; //30px
+                        text-align: $alignCenter;
+                    }
+
+                    @include fold {
+                        font-size: 1.563rem; //25px
+                    }
+
+                    @include Large {
+                        font-size: 2.813rem; //45px
+                    }
+                }
+
+                .main-p {
+                    font-family: $mainFont;
+                    font-size: 0.75rem; //12px
+                    color: $fontColorMain;
+                    line-height: 20px;
+                    width: 80%;
+                    height: 32%;
+                    margin-bottom: 0;
+                    //border: $bulidBorder;
+
+                    @include laptop {
+                        font-size: 0.77rem; //12px
+                        line-height: 0.938rem; //15px
+                    }
+
+                    @include largeTablet {
+                        font-size: 0.75rem; //12px
+                        line-height: 0.813rem; //13px
+                        width: 85%;
+                    }
+
+                    @include tablet {
+                        font-size: 0.625rem; //10px
+                        line-height: 0.75rem; //12px 
+                        width: 85%;
+                    }
+
+                    @include smallDevice {
+                        font-size: 0.5rem; //8px
+                        line-height: 0.625rem; //10px 
+                        width: 85%;
+                    }
+
+                    @include mobile {
+                        font-size: 0.938rem; //15px
+                        line-height: 1.375rem; //22px 
+                        text-align: $alignCenter;
+                    }
+
+                    @include fold {
+                        font-size: 0.875rem; //14px
+                    }
+
+                    @include Large {
+                        font-size: 0.938rem; //15px
+                        line-height: 1.438rem; //23px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Main content heading and button------
+.main-container {
+
+    .row {
+        @include flexSeperate;
+
+        .main-h2 {
+            font-family: $secondryFont;
+            font-size: 2.1875rem; //35px
+            color: $fontH1Color;
+            font-weight: $thinFont;
+            margin-top: 0;
+            margin-bottom: 3.125rem; //50px
+            //border: $bulidBorder;
+
+            @include mobile {
+                @include flexCenterAll;
+            }
+
+            @include fold {
+                font-size: 1.75rem; //28px
+            }
+
+            @include Large {
+                font-size: 2.813rem; //45px
+            }
+        }
+
+        .section2-button {
+            font-family: $mainFont;
+            color: $fontH1Color;
+            font-size: 0.875rem; //14px
+            letter-spacing: 2px;
+            border: 1.5px solid hsl(0, 0%, 18%);
+            border-radius: 2px;
+            text-decoration: none;
+            text-align: $alignCenter;
+            height: 50%;
+            width: 14%;
+            padding: 0.375rem 0 0.375rem 0; //6px
+
+            @include mobile {
+                display: block;
+                margin: $centerContainer;
+                width: 30%;
+            }
+
+            @include fold {
+                width: 40%;
+            }
+
+            @include Large {
+                padding: 0.625rem 0 0.625rem 0; //10px
+            }
+
+            &:hover {
+                background-color: $fontH1Color;
+                color: $fontColorNav;
+            }
+        }
+    }
+}
+
+//Main content img rows------
+.main-container {
+
+    .row {
+
+        .col25 {
+            
+            .col-img1 {
+                display: block;
+                max-width: $wideAsPossible;
+                filter: brightness(80%);
+
+                @include mobile {
+                    display: $getRid;
+                }
+            }
+
+            .col-img1-mob {
+                display: $getRid;
+
+                @include mobile {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .img1-txt {
+                position: absolute;
+                left: 15%;
+                bottom: 11%;
+                font-family: $secondryFont;
+                color: $fontColorNav;
+                font-size: 1.5625rem; //25px
+                font-weight: $extraThinFont;
+                padding: 0;
+                margin: 0;
+                width: 50%;
+                z-index: 2;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    left: 8%;
+                    bottom: 15%;
+                    width: 30%;
+                }
+
+                @include fold {
+                    font-size: 1.25rem; //20px
+                }
+
+                @include Large {
+                    font-size: 1.875rem; //30px
+                }
+            }
+
+            .col-img2 {
+                max-width: $wideAsPossible;
+                filter: brightness(80%);
+
+                @include mobile {
+                    display: $getRid;
+                }
+            }
+
+            .col-img2-mob {
+                display: $getRid;
+
+                @include mobile {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .img2-txt {
+                position: absolute;
+                left: 15%;
+                bottom: 11%;
+                font-family: $secondryFont;
+                color: $fontColorNav;
+                font-size: 1.5625rem; //25px
+                font-weight: $extraThinFont;
+                padding: 0;
+                margin: 0;
+                width: 50%;
+                z-index: 2;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    left: 8%;
+                    bottom: 15%;
+                }
+
+                @include fold {
+                    font-size: 1.25rem; //20px
+                }
+
+                @include Large {
+                    font-size: 1.875rem; //30px
+                }
+            }
+
+            .col-img3 {
+                max-width: $wideAsPossible;
+                filter: brightness(80%);
+
+                @include mobile {
+                    display: $getRid;
+                }
+            }
+
+            .col-img3-mob {
+                display: $getRid;
+
+                @include mobile {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .img3-txt {
+                position: absolute;
+                left: 15%;
+                bottom: 11%;
+                font-family: $secondryFont;
+                color: $fontColorNav;
+                font-size: 1.5625rem; //25px
+                font-weight: $extraThinFont;
+                padding: 0;
+                margin: 0;
+                width: 60%;
+                z-index: 2;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    left: 8%;
+                    bottom: 15%;
+                    width: 35%;
+                }
+
+                @include fold {
+                    font-size: 1.25rem; //20px
+                }
+
+                @include Large {
+                    font-size: 1.875rem; //30px
+                }
+            }
+
+            .col-img4 {
+                max-width: $wideAsPossible;
+                filter: brightness(80%);
+
+                @include mobile {
+                    display: $getRid;
+                }
+            }
+
+            .col-img4-mob {
+                display: $getRid;
+
+                @include mobile {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .img4-txt {
+                position: absolute;
+                left: 15%;
+                bottom: 11%;
+                font-family: $secondryFont;
+                color: $fontColorNav;
+                font-size: 1.5625rem; //25px
+                font-weight: $extraThinFont;
+                padding: 0;
+                margin: 0;
+                width: 40%;
+                z-index: 2;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    left: 8%;
+                    bottom: 15%;
+                    width: 30%;
+                }
+
+                @include fold {
+                    font-size: 1.25rem; //20px
+                }
+
+                @include Large {
+                    font-size: 1.875rem; //30px
+                }
+            }
+
+            .img5-txt {
+                position: absolute;
+                left: 15%;
+                bottom: 11%;
+                font-family: $secondryFont;
+                color: $fontColorNav;
+                font-size: 1.5625rem; //25px
+                font-weight: $extraThinFont;
+                padding: 0;
+                margin: 0;
+                width: 60%;
+                z-index: 2;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    left: 8%;
+                    bottom: 15%;
+                }
+
+                @include fold {
+                    font-size: 1.25rem; //20px
+                }
+
+                @include Large {
+                    font-size: 1.875rem; //30px
+                }
+            }
+
+            .img6-txt {
+                position: absolute;
+                left: 15%;
+                bottom: 11%;
+                font-family: $secondryFont;
+                color: $fontColorNav;
+                font-size: 1.5625rem; //25px
+                font-weight: $extraThinFont;
+                padding: 0;
+                margin: 0;
+                width: 65%;
+                z-index: 2;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    left: 8%;
+                    bottom: 15%;
+                }
+
+                @include fold {
+                    font-size: 1.25rem; //20px
+                }
+
+                @include Large {
+                    font-size: 1.875rem; //30px
+                }
+            }
+
+            .img7-txt {
+                position: absolute;
+                left: 15%;
+                bottom: 11%;
+                font-family: $secondryFont;
+                color: $fontColorNav;
+                font-size: 1.5625rem; //25px
+                font-weight: $extraThinFont;
+                padding: 0;
+                margin: 0;
+                width: 70%;
+                z-index: 2;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    left: 8%;
+                    bottom: 15%;
+                    width: 50%;
+                }
+
+                @include fold {
+                    font-size: 1.25rem; //20px
+                }
+
+                @include Large {
+                    font-size: 1.875rem; //30px
+                }
+            }
+
+            .img8-txt {
+                position: absolute;
+                left: 15%;
+                bottom: 11%;
+                font-family: $secondryFont;
+                color: $fontColorNav;
+                font-size: 1.5625rem; //25px
+                font-weight: $extraThinFont;
+                padding: 0;
+                margin: 0;
+                width: 70%;
+                z-index: 2;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    left: 8%;
+                    bottom: 15%;
+                    width: 50%;
+                }
+
+                @include fold {
+                    font-size: 1.25rem; //20px
+                }
+
+                @include Large {
+                    font-size: 1.875rem; //30px
+                }
+            }
+        }
+    }
+}

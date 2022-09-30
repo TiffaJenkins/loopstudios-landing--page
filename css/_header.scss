@@ -1,0 +1,246 @@
+/*---------------------------Background-----------------------------*/
+/*------------------------------------------------------------------*/
+//header section------
+.header-bg-img {
+    background-image: url("../images/desktop/image-hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-width: $wideAsPossible;
+    padding-bottom: 5rem; //80px
+
+    @include mobile {
+        background-image: url("../images/mobile/image-hero.jpg");
+        padding-bottom: 11.5625rem; //185px 
+        min-height: 100vh;
+    }
+}
+/*-------------------------------------------------------------------*/
+
+//Header Nav------
+.main-container {
+    @include mainContainer;
+    //border: $bulidBorder;
+
+    @include mobile {
+        @include mobileContainer; 
+    }
+
+    .navbar {
+        @include flexAlignCenter;
+        @include flexSeperate;
+        overflow: hidden;
+        width: $wideAsPossible;
+        padding: 2.5rem 0 2.5rem 0; //40px
+        //border: $bulidBorder;
+
+        @include mobile {
+            @include flexColAlignStart;
+            padding: 1.25rem 0 1.25rem 0; //20px
+        }
+
+        .toggle-button {
+            position: absolute;
+            top: 1.45rem; //23.2px                     
+            right: 1.2rem; //19.2px
+            display: $getRid;
+            width: 30px;
+            padding-top: 0.625rem; //10px
+            padding-bottom: 0.625rem; //10px
+            transition: all 0.5s ease-in-out;
+    
+            @include mobile {
+                display: flex;
+
+                .toggle-button_burger {
+                    height: 2px;
+                    width: 90%;
+                    background-color:hsl(100, 100%, 100%);
+                    border-radius: 10px;
+                    transition: all 0.5s ease-in-out;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        height: 2px;
+                        width: 90%;
+                        background-color:hsl(100, 100%, 100%);
+                        border-radius: 10px;
+                        transition: all 0.5s ease-in-out;
+                        transform: translateY(-8px);
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 2px;
+                        width: 90%;
+                        background-color:hsl(100, 100%, 100%);
+                        border-radius: 10px;
+                        transition: all 0.5s ease-in-out;
+                        transform: translateY(8px);
+                    }
+                }
+    
+                //animation------
+                &.open {
+
+                    .toggle-button_burger {
+                        transform: translateX(-50px);
+                        background: transparent;
+
+                        &::before {
+                            transform: rotate(45deg) translate(35px, -35px); 
+                        }
+
+                        &::after {
+                            transform: rotate(-45deg) translate(35px, 35px);
+                        }
+                    }
+                }
+            }
+        }
+    
+        .nav-logo {
+            width: 18%; 
+            height: 12%; 
+            //border: $bulidBorder;
+
+            @include mobile {
+                width: 8.125rem; //130px
+                height: 1.5rem; //30px
+            }
+        }
+
+        .nav-menu {
+            @include mobile {
+                display: $getRid; 
+                width: $wideAsPossible;
+                margin: 0;
+            }
+        }
+
+        .nav-menu.active {
+            @include mobile {
+                display: flex;
+            }
+        }
+        
+        .nav-menu ul {
+            display: flex;
+            padding: 0;
+            list-style: $getRid;
+            //border: $bulidBorder;
+
+            @include mobile {
+                @include flexColAlignStart;
+                width: $wideAsPossible;
+                padding: 1.25rem 0 3.125rem 0; //20px + 50px padding top and bottom
+                background-color: rgba(0, 0, 0, 0.6);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+                border-radius: 0 0 5px 5px;
+                //border: $bulidBorder;
+            }
+
+            li {
+                @include mobile {
+                    text-align: $alignCenter;
+                    margin-top: 0.625rem; //10px
+                    font-weight: 300;
+                }
+            }
+
+            .nav-item {
+                font-family: $mainFont;
+                color: $fontColorNav;
+                font-size: 0.875rem; //14px
+                text-decoration: $getRid;
+                margin-right: 20px;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    font-family: $secondryFont;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    margin-right: 0;
+                    margin-left: 0.5rem;
+                }
+                
+                &:hover {
+                    border-bottom: 2px solid hsl(100, 100%, 100%);
+                    border-radius: 2px;
+                }
+            }    
+        }
+    }    
+}
+
+//Header info section------
+.main-container {
+    @include mainContainer;
+    //border: $bulidBorder;
+
+    @include mobile {
+        @include mobileContainer;
+        //border: $bulidBorder;
+    }
+
+    .row {
+
+        .col60 {
+            padding: 1.5625rem 0 1.5625rem 0; //25px
+
+            @include mobile {
+                margin: 5rem 0 0 0; //80px
+            }
+
+            .main-h1 {
+                font-family: $secondryFont;
+                color: $fontColorNav;
+                font-size: 60px; //3.75rem
+                font-weight: $thinFont;
+                line-height: 3.8rem;
+                padding: 1.5rem;
+                border: 2px solid hsl(100, 100%, 100%);
+
+                @include laptop {
+                    font-size: 55px; //3.438rem
+                    line-height: 50px;
+                }
+
+                @include tablet {
+                    font-size: 40px; //2.5rem
+                    line-height: 40px;
+                }
+
+                @include smallDevice {
+                    font-size: 35px; //2.1875rem
+                    line-height: 35px;
+                }
+
+                @include mobile {
+                    font-size: 50px; //3.125rem
+                    line-height: 48px;
+                }
+
+                @include smallMobile {
+                    font-size: 43px; //2.688rem
+                    line-height: 42px;
+                }
+
+                @include fold {
+                    font-size: 30px; //1.875rem
+                    line-height: 30px;
+                }
+
+                @include Large {
+                    font-size: 75px; //4.688rem
+                    line-height: 68px;
+                    padding: 1.8rem;
+                }
+            }
+        }
+    } 
+}

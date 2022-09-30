@@ -1,0 +1,95 @@
+/*----------------------background----------------------*/
+/*------------------------------------------------------*/
+.footer-bg {
+    background-color: $fontH1Color;
+    padding-top: 2.1875rem; //35px
+    padding-bottom: 0.9375rem; //15px
+
+    @include mobile {
+        padding-top: 2.5rem; //40px
+        padding-bottom: 1.25rem; //20px
+    }
+}
+/*------------------------------------------------------*/
+
+.main-container {
+
+    .row {
+
+        .col {
+            @include mobile {
+                margin: $centerContainer;
+            }
+
+            .footer-logo {
+                width: 7.5rem; //120px
+                height: 1.48rem; //23.68px
+                //border: $bulidBorder;
+
+                @include Large {
+                    width: 8.75rem; //140px
+                    height: 1.688rem; //27px
+                }
+            }
+
+            .nav-menu ul {
+                display: flex;
+                padding: 0;
+                list-style: $getRid;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    @include rowStack;
+                    @include flexAlignCenter;
+                    padding: 1.25rem 0 0.938rem 0; //20px + 15px
+                    margin: 0;
+                }
+
+                li .nav-item {
+                    font-family: $mainFont;
+                    color: $fontColorNav;
+                    font-size: 0.75rem; //12px
+                    text-decoration: $getRid;
+                    margin-right: 20px;
+                    //border: $bulidBorder;
+
+                    @include mobile {
+                        display: block;
+                        margin-right: 0;
+                        margin-bottom: 0.625rem; //810px//
+                    }
+
+                    @include Large {
+                        font-size: 0.938rem; //15px
+                    }
+                }
+            }
+
+            .icon-div {
+                text-align: $alignEnd;
+                //border: $bulidBorder;
+
+                @include mobile {
+                    text-align: $alignCenter;
+                }
+
+                .footer-icon {
+                    padding-left: 0.5rem; //8px
+                    //border: $bulidBorder;
+                }
+            }
+
+            .footer-p {
+                font-family: $mainFont;
+                color: $fontColorFooter;
+                font-size: 0.75rem; //12px
+                text-align: $alignEnd;
+                //border: $bulidBorder;
+
+                @include Large {
+                    font-size: 0.875rem; //14px      
+                }
+            }
+        }
+    }
+}

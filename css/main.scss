@@ -1,0 +1,63 @@
+@import "./mixins";
+@import "./header";
+@import "./content";
+@import "./footer";
+
+/*-------------------------------fixes------------------------------*/
+/*------------------------------------------------------------------*/
+//border box------
+* {
+    box-sizing: border-box;
+}
+
+//cancel whitespace on all sides------
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*-----------------------reuseable containers------------------------*/
+/*---------------------------for layout------------------------------*/
+.row {
+    display: flex;
+
+    @include mobile {
+        @include rowStack;
+    }
+}
+
+.col {
+    flex: 1;
+    //border: $bulidBorder;
+}
+
+.col25 {
+    flex: 0 0 25%;
+    position: relative;
+    margin: 0;
+    min-width: 0;
+    padding: 0.625rem 0.625rem 0.438rem 0.625rem; //10px + 7px bottom (due to weird behaviour)
+    //border: $bulidBorder;
+
+    @include mobile {
+        padding: 0.625rem;
+    }
+}
+
+.col40 {
+    flex: 0 0 40%;
+    min-width: 0;
+    //border: $bulidBorder;
+}
+
+.col60 {
+    flex: 0 0 60%;
+    min-width: 0;
+    //border: $bulidBorder;
+}
+
+.col60-2 {
+    flex: 0 0 60%;
+    min-width: 0;
+    //border: $bulidBorder;
+}
